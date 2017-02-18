@@ -4,7 +4,20 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
+var article-one = {
+title: 'article one',
+heading: 'article one',
+date: 'feb 18',
+content:'    <p>
+                This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.
+            </p>
+             <p>
+                This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.
+            </p>
+            <p>
+                This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.
+            </p> '
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
