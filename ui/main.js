@@ -21,6 +21,6 @@ button.onclick = function() {
   };
     //Make the request
     
-    request.open('GET', 'https://cloud.imad.hasura.io/code/counter', true);
+    request.open('GET', 'http://dev-shatru.imad.hasura-app.io/counter', true);
     request.send(null);
 };
