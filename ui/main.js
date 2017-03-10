@@ -1,10 +1,10 @@
 //console.log('Loaded!');
 //counter code
 var button = document.getElementById('counter');
-var counter = 0;
+
 button.onclick = function() {
     //Create request object
-    var request = XMLHttpRequest();
+    var request =new XMLHttpRequest();
     //Capture the request and store
     request.onreadystatechange === function(){
    
