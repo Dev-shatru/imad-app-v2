@@ -3,7 +3,7 @@
 var button = document.getElementById('counter');
 var counter = 0;
 button.onclick = function() {
-    //get the  request to the counter
+    //Create request object
     var request = XMLHttpRequest();
     //Capture the request and store
     request.onreadystatechange === function(){
@@ -20,5 +20,6 @@ button.onclick = function() {
   };
     //Make the request
     
-    
+    request.open('GET', 'https://cloud.imad.hasura.io/counter', true);
+    request.send(null);
 };
