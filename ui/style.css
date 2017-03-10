@@ -19,17 +19,10 @@ body {
 .img-medium {
     height: 200px;
 }
+#menu-wrapper
+         {     }
 
-        #menu-wrapper
-         {
-
-}
-
-#menu {
-	overflow: hidden;
-	height: 60px;
-        margin-top: 0px;
-}
+#menu {	overflow: hidden;	height: 60px;   margin-top: 0px; }
 
 #menu ul {
 	margin: 0;
