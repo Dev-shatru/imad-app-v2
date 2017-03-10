@@ -5,57 +5,11 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-title: 'article-one',
-heading: 'article one',
-date: 'feb 18',
-content:`    <p>
-                This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.
-            </p>
-             <p>
-                This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.
-            </p>
-            <p>
-                This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.This is the content of my first web page.
-            </p>`
-};
-function createTemplate(data) {
-    var title = data.title;
-    var date=data.date;
-    var heading = data.heading;
-    var content=data.content;
-    
-var htmlTemplate =
-    `<html>
-    <head>
-    <title>
-       ${title}
-    </title>
-    <meta name="viewport" width="width-device-width, initial-scale=1"/>
-    </head>
-    <body>
-        <div>
-            <a href="/">Home</a>
-        </div>
-        <hr/>
-        <h3>
-         ${heading}
-        </h3>
-        <div>
-        ${date}
-        </div>
-        <div>
-           ${content}
-               </div>
-    </body>
 
-</html>';
-return htmlTemplate;
-});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-counter=0;
+var counter=0;
 app.get('/counter',function(req,res){
    counter=counter+1;
    res.send(counter.toString());
