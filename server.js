@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 }); 
 
-app.get('/hash/:input',function(req,res)){
+app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input);
     res.send(hashedString);
 });
