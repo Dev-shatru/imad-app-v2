@@ -31,7 +31,8 @@ app.post('/create-user',function(req,res){
   pool.query('INSERT INTO "user1"(Username,Password) VALUES($1$2)',[Username,dbString],function(err,result){
      if(err){
          res.status(500).send(err.toString());
-     }esle{
+     }
+     else{
          res.send('User successfully created'+Username);
          
      }
