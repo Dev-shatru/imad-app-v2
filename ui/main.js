@@ -21,6 +21,6 @@ button.onclick = function() {
   };
     //Make the request
     
-    request.open('POST', 'http://dev-shatru.imad.hasura-app.io/counter', true);
+    request.open('GET', 'http://dev-shatru.imad.hasura-app.io/counter', true);
     request.send(null);
 };
