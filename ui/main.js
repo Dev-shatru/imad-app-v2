@@ -12,8 +12,8 @@ button.onclick = function() {
     if(request.readyState === XMLHttpRequest.DONE){
        //Take some action
        if(request.status === 200){
-           var counter = request.responseText;
-           var span = document.getElementById('count');
+          // var counter = request.responseText;
+          // var span = document.getElementById('count');
            span.innerHTML = counter.toString();
        }
     }
@@ -21,6 +21,6 @@ button.onclick = function() {
   };
     //Make the request
     
-    request.open('GET', 'http://dev-shatru.imad.hasura-app.io/counter', true);
+    request.open('POST', 'http://dev-shatru.imad.hasura-app.io/counter', true);
     request.send(null);
 };
